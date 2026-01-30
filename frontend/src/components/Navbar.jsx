@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Menu, X, ChevronDown } from 'lucide-react';
+import { Phone, Menu, X, ChevronDown, Globe } from 'lucide-react';
 import { siteInfo, boilerBrands } from '../data/mock';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBoilersOpen, setIsBoilersOpen] = useState(false);
   const location = useLocation();
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,10 +25,11 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-  { name: 'Bosh sahifa', path: '/' },
-  { name: 'Biz haqimizda', path: '/about' },
-  { name: 'Xizmatlar', path: '/services' },
-  { name: 'Aloqa', path: '/contact' }];
+    { name: t.nav.home, path: '/' },
+    { name: t.nav.about, path: '/about' },
+    { name: t.nav.services, path: '/services' },
+    { name: t.nav.contact, path: '/contact' }
+  ];
 
 
   return (
