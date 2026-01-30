@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock } from 'lucide-react';
 import { siteInfo } from '../data/mock';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -14,7 +16,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-xl font-bold mb-4">ServicePlyus</h3>
             <p className="text-sm leading-relaxed mb-4">
-              Toshkent shahrida katyol ta'mirlash va texnik xizmat ko'rsatish bo'yicha professional kompaniya.
+              {t.footer.description}
             </p>
             <div className="flex space-x-3">
               <a
