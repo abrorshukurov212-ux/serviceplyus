@@ -38,10 +38,10 @@ const BoilerBrandPage = () => {
             {/* Content */}
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                {brand.name} katyol remonti Toshkentda
+                {brand.name} {t.boiler.titleSuffix}
               </h1>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                Professional {brand.name} katyollari uchun ta'mirlash va texnik xizmat ko'rsatish
+                {language === 'uz' ? 'Professional' : 'Профессиональный'} {brand.name} {t.boiler.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <a
@@ -49,13 +49,13 @@ const BoilerBrandPage = () => {
                   className="flex items-center justify-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Ustani chaqirish</span>
+                  <span>{t.common.callMaster}</span>
                 </a>
                 <Link
                   to="/contact"
                   className="flex items-center justify-center space-x-2 bg-blue-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition-all duration-300 border-2 border-white"
                 >
-                  <span>Ariza qoldirish</span>
+                  <span>{t.common.submitRequest}</span>
                   <ChevronRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -65,7 +65,7 @@ const BoilerBrandPage = () => {
             <div className="relative">
               <img
                 src={brand.image}
-                alt={`${brand.name} katyol`}
+                alt={`${brand.name} ${t.boiler.titleSuffix}`}
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
             </div>
