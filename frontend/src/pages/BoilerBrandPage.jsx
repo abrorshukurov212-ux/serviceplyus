@@ -140,35 +140,17 @@ const BoilerBrandPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              {brand.name} uchun xizmatlarimiz
+              {t.boiler.servicesTitle} {brand.name}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                {
-                  title: 'Bepul diagnostika',
-                  description: `${brand.name} katyolni to'liq tekshirish va nosozliklarni aniqlash`
-                },
-                {
-                  title: 'Professional ta\'mirlash',
-                  description: 'Barcha turdagi nosozliklarni tezkor va sifatli bartaraf etish'
-                },
-                {
-                  title: 'Ehtiyot qismlar',
-                  description: 'Asl va sertifikatlangan ehtiyot qismlarni o\'rnatish'
-                },
-                {
-                  title: 'Texnik xizmat',
-                  description: 'Muntazam tozalash, sozlash va profilaktika ishlari'
-                },
-                {
-                  title: 'Tezkor xizmat',
-                  description: '24/7 ish tartibi, arizangizga 1 soat ichida javob'
-                },
-                {
-                  title: 'Kafolat',
-                  description: 'Barcha ta\'mirlash ishlariga 6 oylik kafolat beramiz'
-                }
+                { title: t.boiler.service1Title, desc: t.boiler.service1Desc.replace('{brand}', brand.name) },
+                { title: t.boiler.service2Title, desc: t.boiler.service2Desc },
+                { title: t.boiler.service3Title, desc: t.boiler.service3Desc },
+                { title: t.boiler.service4Title, desc: t.boiler.service4Desc },
+                { title: t.boiler.service5Title, desc: t.boiler.service5Desc },
+                { title: t.boiler.service6Title, desc: t.boiler.service6Desc }
               ].map((service, index) => (
                 <div
                   key={index}
@@ -184,7 +166,7 @@ const BoilerBrandPage = () => {
                       {service.title}
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      {service.description}
+                      {service.desc}
                     </p>
                   </div>
                 </div>
@@ -199,7 +181,7 @@ const BoilerBrandPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              {brand.name} katyollar va ta'mirlash jarayoni
+              {brand.name} {t.boiler.galleryTitle}
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -210,7 +192,7 @@ const BoilerBrandPage = () => {
                 >
                   <img
                     src={image}
-                    alt={`${brand.name} katyol ${index + 1}`}
+                    alt={`${brand.name} ${index + 1}`}
                     className="w-full h-64 object-cover hover:scale-110 transition-transform duration-300"
                   />
                 </div>
@@ -224,10 +206,10 @@ const BoilerBrandPage = () => {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {brand.name} katyolingizni bugun ta'mirlang!
+            {brand.name} {t.boiler.ctaTitle}
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Professional ustalar, asl ehtiyot qismlar va 6 oylik kafolat
+            {t.boiler.ctaSubtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -236,19 +218,19 @@ const BoilerBrandPage = () => {
               className="flex items-center space-x-3 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
             >
               <Phone className="w-6 h-6" />
-              <span>Ustani chaqirish</span>
+              <span>{t.common.callMaster}</span>
             </a>
             
             <Link
               to="/contact"
               className="bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 border-2 border-white"
             >
-              Onlayn ariza qoldirish
+              {t.common.onlineRequest}
             </Link>
           </div>
 
           <div className="mt-12">
-            <p className="text-blue-100 mb-4">Boshqa brendlarni ham ko'ring:</p>
+            <p className="text-blue-100 mb-4">{t.boiler.otherBrands}</p>
             <div className="flex flex-wrap justify-center gap-3">
               {boilerBrands.filter(b => b.slug !== slug).slice(0, 6).map((otherBrand) => (
                 <Link
