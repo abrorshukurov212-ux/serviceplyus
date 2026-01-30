@@ -10,7 +10,6 @@ const Services = () => {
       case 'Wrench': return Wrench;
       case 'Settings': return Settings;
       case 'CheckCircle': return CheckCircle;
-      case 'Tool': return Tool;
       default: return Wrench;
     }
   };
