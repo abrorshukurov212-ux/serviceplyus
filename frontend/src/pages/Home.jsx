@@ -15,8 +15,9 @@ const Home = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroContent.image}
-            alt="Katyol ta'mirlash xizmati"
-            className="w-full h-full object-cover" />
+            alt={t.home.heroTitle}
+            className="w-full h-full object-cover"
+          />
 
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/75"></div>
         </div>
