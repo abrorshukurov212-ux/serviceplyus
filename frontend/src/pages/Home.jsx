@@ -180,43 +180,42 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Katyolni bugundan boshlab ta'mirlang!
+            {t.home.ctaTitle}
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            10+ yillik tajriba, professional yondashuv, kafolat xizmati. 
-            Bizga ishongan minglab mijozlar bunga guvoh!
+            {t.home.ctaSubtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <a
               href={siteInfo.phoneLink}
-              className="flex items-center space-x-3 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
-
+              className="flex items-center space-x-3 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+            >
               <Phone className="w-6 h-6" />
               <span>{siteInfo.phone}</span>
             </a>
             
             <Link
               to="/contact"
-              className="flex items-center space-x-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 border-2 border-white">
-
-              <span>Onlayn ariza qoldirish</span>
+              className="flex items-center space-x-2 bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 border-2 border-white"
+            >
+              <span>{t.common.onlineRequest}</span>
               <ChevronRight className="w-5 h-5" />
             </Link>
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold mb-2">1000+</div>
-              <div className="text-blue-100">Mamnun mijozlar</div>
+              <div className="text-4xl font-bold mb-2">{t.home.stats1}</div>
+              <div className="text-blue-100">{t.home.stats1Label}</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-blue-100">Ishlash vaqti</div>
+              <div className="text-4xl font-bold mb-2">{t.home.stats2}</div>
+              <div className="text-blue-100">{t.home.stats2Label}</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold mb-2">6 oy</div>
-              <div className="text-blue-100">Kafolat muddati</div>
+              <div className="text-4xl font-bold mb-2">{t.home.stats3}</div>
+              <div className="text-blue-100">{t.home.stats3Label}</div>
             </div>
           </div>
         </div>
