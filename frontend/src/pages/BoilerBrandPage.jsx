@@ -2,15 +2,22 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Phone, Wrench, CheckCircle, AlertCircle, ChevronRight } from 'lucide-react';
 import { boilerBrands, siteInfo } from '../data/mock';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const BoilerBrandPage = () => {
   const { slug } = useParams();
+  const { t, language, getBoilerTranslation } = useLanguage();
   const brand = boilerBrands.find(b => b.slug === slug);
 
   // If brand not found, redirect to home
   if (!brand) {
     return <Navigate to="/" replace />;
   }
+
+  // Get Russian translation if available
+  const boilerTrans = getBoilerTranslation(slug);
+  const description = boilerTrans?.description || brand.description;
+  const problems = boilerTrans?.problems || brand.commonProblems;
 
   // Get 4 random images for the brand (cycling through available images)
   const brandImages = [
