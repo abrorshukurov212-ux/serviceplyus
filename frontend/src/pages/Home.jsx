@@ -41,7 +41,7 @@ const Home = () => {
               className="flex items-center space-x-3 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
 
               <Phone className="w-6 h-6" />
-              <span>+998 92 070 54 54</span>
+              <span>{t.common.callNow}</span>
             </a>
             
             <a
