@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Wrench, Settings, CheckCircle, Tool, Phone, ChevronRight } from 'lucide-react';
+import { Search, Wrench, Settings, CheckCircle, Phone, ChevronRight } from 'lucide-react';
 import { services, siteInfo } from '../data/mock';
 
 const Services = () => {
