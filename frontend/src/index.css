@@ -113,3 +113,14 @@ code {
         border-bottom-color: inherit;
     }
 }
+
+/* Custom utility classes */
+@layer utilities {
+  .border-3 {
+    border-width: 3px;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+}
