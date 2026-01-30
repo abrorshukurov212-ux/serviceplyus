@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Wrench, Settings, CheckCircle, Phone, ChevronRight } from 'lucide-react';
 import { services, siteInfo } from '../data/mock';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Services = () => {
+  const { t } = useLanguage();
+  
   const getIcon = (iconName) => {
     switch (iconName) {
       case 'Search': return Search;
@@ -14,16 +17,55 @@ const Services = () => {
     }
   };
 
+  // Create services array with translations
+  const translatedServices = [
+    {
+      id: 1,
+      title: t.services.service1Title,
+      description: t.services.service1Desc,
+      icon: 'Search',
+      image: services[0].image
+    },
+    {
+      id: 2,
+      title: t.services.service2Title,
+      description: t.services.service2Desc,
+      icon: 'Wrench',
+      image: services[1].image
+    },
+    {
+      id: 3,
+      title: t.services.service3Title,
+      description: t.services.service3Desc,
+      icon: 'Settings',
+      image: services[2].image
+    },
+    {
+      id: 4,
+      title: t.services.service4Title,
+      description: t.services.service4Desc,
+      icon: 'CheckCircle',
+      image: services[3].image
+    },
+    {
+      id: 5,
+      title: t.services.service5Title,
+      description: t.services.service5Desc,
+      icon: 'Wrench',
+      image: services[4].image
+    }
+  ];
+
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Bizning xizmatlarimiz
+            {t.services.title}
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Katyol ta'mirlash va texnik xizmatning barcha turlarini professional darajada amalga oshiramiz
+            {t.services.subtitle}
           </p>
         </div>
       </section>
@@ -32,7 +74,7 @@ const Services = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service) => {
+            {translatedServices.map((service) => {
               const IconComponent = getIcon(service.icon);
               
               return (
@@ -68,7 +110,7 @@ const Services = () => {
                         href={siteInfo.phoneLink}
                         className="inline-flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors group/link"
                       >
-                        <span>Hozir buyurtma qilish</span>
+                        <span>{t.common.orderNow}</span>
                         <ChevronRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
                       </a>
                     </div>
