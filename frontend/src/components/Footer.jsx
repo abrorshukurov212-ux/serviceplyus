@@ -101,7 +101,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Aloqa ma'lumotlari</h3>
+            <h3 className="text-white text-lg font-semibold mb-4">{t.footer.contactInfo}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
@@ -116,11 +116,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">{siteInfo.serviceArea}</span>
+                <span className="text-sm">{t.footer.serviceArea}</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span className="text-sm">Ish vaqti: {siteInfo.workingHours}</span>
+                <span className="text-sm">{t.footer.workingHours}</span>
               </li>
             </ul>
           </div>
@@ -130,7 +130,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-400">
-              © {currentYear} ServicePlyus. Barcha huquqlar himoyalangan.
+              © {currentYear} ServicePlyus. {t.footer.copyright}
             </p>
             <p className="text-sm text-gray-400">
               serviceplyus.uz
