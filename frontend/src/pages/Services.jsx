@@ -127,45 +127,21 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Xizmatlarimiz nimalarni o'z ichiga oladi?
+              {t.services.includesTitle}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Har bir xizmat to'liq va professional darajada amalga oshiriladi
+              {t.services.includesSubtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                title: 'Bepul diagnostika',
-                description: 'Katyolni to\'liq tekshirish va muammoni aniqlash',
-                icon: '🔍'
-              },
-              {
-                title: 'Tezkor xizmat',
-                description: 'Arizangizga 1 soat ichida javob va tezkor ta\'mirlash',
-                icon: '⚡'
-              },
-              {
-                title: 'Asl ehtiyot qismlar',
-                description: 'Faqat sertifikatlangan va original qismlar ishlatamiz',
-                icon: '✓'
-              },
-              {
-                title: 'Professional ustalar',
-                description: '10+ yillik tajribaga ega malakali mutaxassislar',
-                icon: '👨‍🔧'
-              },
-              {
-                title: 'Kafolat xizmati',
-                description: 'Barcha ta\'mirlash ishlariga 6 oylik kafolat',
-                icon: '🛡️'
-              },
-              {
-                title: 'Qulay narxlar',
-                description: 'Bozordagi eng maqbul va adolatli narxlar',
-                icon: '💰'
-              }
+              { title: t.services.include1Title, desc: t.services.include1Desc, icon: '🔍' },
+              { title: t.services.include2Title, desc: t.services.include2Desc, icon: '⚡' },
+              { title: t.services.include3Title, desc: t.services.include3Desc, icon: '✓' },
+              { title: t.services.include4Title, desc: t.services.include4Desc, icon: '👨\u200D🔧' },
+              { title: t.services.include5Title, desc: t.services.include5Desc, icon: '🛡️' },
+              { title: t.services.include6Title, desc: t.services.include6Desc, icon: '💰' }
             ].map((item, index) => (
               <div
                 key={index}
@@ -176,7 +152,7 @@ const Services = () => {
                   {item.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  {item.description}
+                  {item.desc}
                 </p>
               </div>
             ))}
@@ -189,10 +165,10 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Xizmat narxlari
+              {t.services.pricingTitle}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Aniq narxlar diagnostikadan keyin aniqlanadi. Diagnostika bepul!
+              {t.services.pricingSubtitle}
             </p>
           </div>
 
@@ -200,41 +176,41 @@ const Services = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  O'rtacha narxlar
+                  {t.services.averagePrices}
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-gray-700">Diagnostika</span>
-                    <span className="font-bold text-blue-600">Bepul</span>
+                    <span className="text-gray-700">{t.services.price1}</span>
+                    <span className="font-bold text-blue-600">{t.services.price1Value}</span>
                   </li>
                   <li className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-gray-700">Tozalash va sozlash</span>
-                    <span className="font-bold text-gray-900">300,000 so'mdan</span>
+                    <span className="text-gray-700">{t.services.price2}</span>
+                    <span className="font-bold text-gray-900">{t.services.price2Value}</span>
                   </li>
                   <li className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-gray-700">Kichik ta'mirlash</span>
-                    <span className="font-bold text-gray-900">400,000 so'mdan</span>
+                    <span className="text-gray-700">{t.services.price3}</span>
+                    <span className="font-bold text-gray-900">{t.services.price3Value}</span>
                   </li>
                   <li className="flex justify-between items-center">
-                    <span className="text-gray-700">Katta ta'mirlash</span>
-                    <span className="font-bold text-gray-900">700,000 so'mdan</span>
+                    <span className="text-gray-700">{t.services.price4}</span>
+                    <span className="font-bold text-gray-900">{t.services.price4Value}</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-8">
                 <h3 className="text-2xl font-bold mb-4">
-                  Aniq narxni bilib oling
+                  {t.services.getPrice}
                 </h3>
                 <p className="text-blue-100 mb-6 leading-relaxed">
-                  Har bir holat individual. Bepul diagnostikadan so'ng aniq narx va ish hajmini aytamiz.
+                  {t.services.getPriceDesc}
                 </p>
                 <a
                   href={siteInfo.phoneLink}
                   className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl w-full justify-center"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Hozir qo'ng'iroq qilish</span>
+                  <span>{t.common.callNow}</span>
                 </a>
               </div>
             </div>
@@ -246,10 +222,10 @@ const Services = () => {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Katyolni bugun ta'mirlang!
+            {t.services.ctaTitle}
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Qo'ng'iroq qiling va bepul diagnostika oling
+            {t.services.ctaSubtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -265,7 +241,7 @@ const Services = () => {
               to="/contact"
               className="bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 border-2 border-white"
             >
-              Onlayn ariza qoldirish
+              {t.common.onlineRequest}
             </Link>
           </div>
         </div>
