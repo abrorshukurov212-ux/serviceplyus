@@ -25,13 +25,13 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            {heroContent.title}
+            {t.home.heroTitle}
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
-            {heroContent.subtitle}
+            {t.home.heroSubtitle}
           </p>
           <p className="text-lg text-blue-200 mb-10 max-w-2xl mx-auto">
-            {heroContent.description}
+            {t.home.heroDescription}
           </p>
 
           {/* CTA Buttons */}
