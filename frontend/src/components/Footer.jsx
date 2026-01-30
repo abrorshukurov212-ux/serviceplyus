@@ -47,26 +47,26 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Tezkor havolalar</h3>
+            <h3 className="text-white text-lg font-semibold mb-4">{t.footer.quickLinks}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="hover:text-white transition-colors">
-                  Bosh sahifa
+                  {t.nav.home}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="hover:text-white transition-colors">
-                  Biz haqimizda
+                  {t.nav.about}
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="hover:text-white transition-colors">
-                  Xizmatlar
+                  {t.nav.services}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-white transition-colors">
-                  Aloqa
+                  {t.nav.contact}
                 </Link>
               </li>
             </ul>
@@ -74,7 +74,7 @@ const Footer = () => {
 
           {/* Popular Brands */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Mashhur brendlar</h3>
+            <h3 className="text-white text-lg font-semibold mb-4">{t.footer.popularBrands}</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/katyollar/baxi" className="hover:text-white transition-colors">
