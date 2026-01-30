@@ -133,43 +133,43 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Qaysi katyollarni ta'mirlaymiz
+              {t.home.brandsTitle}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Barcha mashhur brendlarni professional ta'mirlash va texnik xizmat
+              {t.home.brandsSubtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {boilerBrands.map((brand) =>
-            <Link
-              key={brand.slug}
-              to={`/katyollar/${brand.slug}`}
-              className="group bg-gray-50 rounded-xl p-6 hover:bg-blue-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 border-transparent hover:border-blue-200">
-
+            {boilerBrands.map((brand) => (
+              <Link
+                key={brand.slug}
+                to={`/katyollar/${brand.slug}`}
+                className="group bg-gray-50 rounded-xl p-6 hover:bg-blue-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 border-transparent hover:border-blue-200"
+              >
                 <div className="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-lg">
                   <img
-                  src={brand.image}
-                  alt={`${brand.name} katyol`}
-                  className="w-full h-32 object-cover group-hover:scale-110 transition-transform duration-300" />
-
+                    src={brand.image}
+                    alt={`${brand.name} ${t.home.brandsTitle.toLowerCase()}`}
+                    className="w-full h-32 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 text-center group-hover:text-blue-600 transition-colors">
                   {brand.name}
                 </h3>
               </Link>
-            )}
+            ))}
           </div>
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">
-              Va boshqa ko'plab brendlar...
+              {t.home.brandsMore}
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
-
-              <span>Bepul konsultatsiya olish</span>
+              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
+            >
+              <span>{t.common.freeConsultation}</span>
               <ChevronRight className="w-5 h-5" />
             </Link>
           </div>
