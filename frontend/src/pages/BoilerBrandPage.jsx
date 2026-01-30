@@ -78,10 +78,10 @@ const BoilerBrandPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              {brand.name} katyollari haqida
+              {brand.name} {t.boiler.aboutTitle}
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              {brand.description}
+              {description}
             </p>
 
             <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
@@ -89,7 +89,7 @@ const BoilerBrandPage = () => {
                 <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-gray-700 font-medium">
-                    Bizning mutaxassislarimiz {brand.name} brendining barcha modellarini professional darajada ta'mirlaydi va texnik xizmat ko'rsatadi.
+                    {t.boiler.aboutNote.replace('{brand}', brand.name)}
                   </p>
                 </div>
               </div>
@@ -103,11 +103,11 @@ const BoilerBrandPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              {brand.name} katyollaridagi keng tarqalgan muammolar
+              {brand.name} {t.boiler.problemsTitle}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {brand.commonProblems.map((problem, index) => (
+              {problems.map((problem, index) => (
                 <div
                   key={index}
                   className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
@@ -128,7 +128,7 @@ const BoilerBrandPage = () => {
 
             <div className="mt-8 bg-white p-6 rounded-xl shadow-md">
               <p className="text-gray-700 leading-relaxed">
-                <strong>Muammo ko'rdingizmi?</strong> Tashvishlanmang! Bizning tajribali ustalarimiz {brand.name} katyollaridagi har qanday nosozlikni tezda va sifatli bartaraf etadi.
+                <strong>{language === 'uz' ? 'Muammo ko\'rdingizmi?' : 'Обнаружили проблему?'}</strong> {t.boiler.problemNote.replace('{brand}', brand.name)}
               </p>
             </div>
           </div>
