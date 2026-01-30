@@ -5,6 +5,8 @@ import { heroContent, advantages, boilerBrands, siteInfo } from '../data/mock';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Home = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
