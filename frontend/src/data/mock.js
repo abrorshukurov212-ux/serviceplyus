@@ -262,7 +262,7 @@ export const services = [
     id: 5,
     title: "O'rnatish va sozlash",
     description: "Yangi katyollarni professional o'rnatish va ishga tushirish",
-    icon: "Tool",
+    icon: "Wrench",
     image: "https://images.pexels.com/photos/8478264/pexels-photo-8478264.jpeg"
   }
 ];
