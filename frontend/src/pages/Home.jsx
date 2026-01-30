@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Award, Shield, Clock, DollarSign, ChevronRight } from 'lucide-react';
 import { heroContent, advantages, boilerBrands, siteInfo } from '../data/mock';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Home = () => {
   return (
