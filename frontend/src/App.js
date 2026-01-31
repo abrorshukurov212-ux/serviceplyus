@@ -14,6 +14,9 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import BoilerBrandPage from "./pages/BoilerBrandPage";
+import ServicePage from "./pages/ServicePage";
+import PricingPage from "./pages/PricingPage";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
   return (
@@ -23,10 +26,22 @@ function App() {
           <Navbar />
           <main>
             <Routes>
+              {/* Main Pages */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
+              
+              {/* Service Pages */}
+              <Route path="/xizmatlar/:slug" element={<ServicePage />} />
+              
+              {/* Pricing Page */}
+              <Route path="/narxlar" element={<PricingPage />} />
+              
+              {/* Blog Page */}
+              <Route path="/blog" element={<BlogPage />} />
+              
+              {/* Boiler Brand Pages */}
               <Route path="/katyollar/:slug" element={<BoilerBrandPage />} />
             </Routes>
           </main>
