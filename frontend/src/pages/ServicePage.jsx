@@ -28,6 +28,8 @@ const ServicePage = () => {
 
   return (
     <div className="min-h-screen pt-20">
+      <SEOHead page="service" slug={slug} />
+      
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
