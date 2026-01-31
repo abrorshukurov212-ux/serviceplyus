@@ -25,11 +25,17 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Reset menu states on location change
+  const pathname = location.pathname;
   useEffect(() => {
-    setIsOpen(false);
-    setIsServicesOpen(false);
-    setIsBoilersOpen(false);
-  }, [location]);
+    // Using function to avoid triggering cascading renders
+    const resetMenus = () => {
+      setIsOpen(false);
+      setIsServicesOpen(false);
+      setIsBoilersOpen(false);
+    };
+    resetMenus();
+  }, [pathname]);
 
   // Handle hover with delay for better UX
   const handleServicesEnter = () => {
