@@ -3,6 +3,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Phone, Wrench, CheckCircle, AlertCircle, ChevronRight } from 'lucide-react';
 import { boilerBrands, siteInfo } from '../data/mock';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 const BoilerBrandPage = () => {
   const { slug } = useParams();

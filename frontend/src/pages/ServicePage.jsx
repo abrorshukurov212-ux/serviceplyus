@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Phone, ChevronRight, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { siteInfo, services } from '../data/mock';
+import SEOHead from '../components/SEOHead';
 import EnhancedLeadForm from '../components/EnhancedLeadForm';
 
 const ServicePage = () => {
