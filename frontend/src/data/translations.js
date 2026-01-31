@@ -607,7 +607,15 @@ export const translations = {
       banner2: "24/7",
       banner2Label: "Всегда на связи",
       banner3: "Бесплатно",
-      banner3Label: "Диагностика"
+      banner3Label: "Диагностика",
+      
+      // Lead Form
+      leadFormTitle: "Оставить заявку",
+      leadFormSubtitle: "Ожидайте звонок, мы скоро свяжемся с вами",
+      serviceTypeLabel: "Тип услуги",
+      serviceTypePlaceholder: "Выберите услугу",
+      messageLabel: "Сообщение (необязательно)",
+      messagePlaceholder: "Дополнительная информация..."
     },
 
     // Boiler Brand Page
