@@ -57,7 +57,93 @@ export const translations = {
       stats2: "24/7",
       stats2Label: "Ishlash vaqti",
       stats3: "6 oy",
-      stats3Label: "Kafolat muddati"
+      stats3Label: "Kafolat muddati",
+      
+      // New Enhanced Sections
+      pricingTitle: "Xizmatlar narxlari",
+      pricingSubtitle: "Gaz katyollari ta'mirlash va texnik xizmat narxlari",
+      
+      // Detailed Service Pricing
+      servicePricing: {
+        diagnostics: {
+          name: "Diagnostika va profilaktika",
+          price: "400,000 so'mdan",
+          desc: "To'liq diagnostika va katyol holatini tekshirish"
+        },
+        cleaning: {
+          name: "Katyol tozalash va sozlash",
+          price: "450,000 so'mdan",
+          desc: "Issiqlik almashinuvchini tozalash, yonish kamerasini tozalash"
+        },
+        threeWayValve: {
+          name: "Uch yo'nalishli klapan almashtirish",
+          price: "450,000 so'mdan",
+          desc: "Asl ehtiyot qismlar bilan almashtirish"
+        },
+        turbine: {
+          name: "Turb ventalyator almashtirish",
+          price: "850,000 so'mdan",
+          desc: "Chiqarish tizimi ta'mirlash"
+        },
+        heatExchanger: {
+          name: "Issiqlik almashinuvchini almashtirish",
+          price: "1,300,000 so'mdan",
+          desc: "Yangi issiqlik almashinuvchi o'rnatish"
+        },
+        pressureSensor: {
+          name: "Bosim sensori almashtirish",
+          price: "250,000 so'mdan",
+          desc: "Suv bosimi datchigi almashtirish"
+        },
+        manostat: {
+          name: "Manostat almashtirish",
+          price: "380,000 so'mdan",
+          desc: "Havo bosimi datchigi almashtirish"
+        },
+        emergency: {
+          name: "Shoshilinch ta'mirlash (24/7)",
+          price: "Kelishuv asosida",
+          desc: "Tezkor chiqish va muammoni bartaraf etish"
+        }
+      },
+      
+      // Trust Signals / Why Choose Us
+      trustTitle: "Nega bizni tanlashadi?",
+      trustSubtitle: "Bizning servis markazi Toshkentdagi eng yaxshisi",
+      
+      trust1Title: "Tezkor chiqish",
+      trust1Desc: "Ustalar o'sha kuni keladi, 30-60 daqiqa ichida",
+      trust2Title: "Bepul diagnostika",
+      trust2Desc: "Mutaxassislar tezda katyol nosozligini aniqlay oladi",
+      trust3Title: "24/7 ish tartibi",
+      trust3Desc: "Servis markazimiz sizning qo'ng'irog'ingizni doim qabul qiladi",
+      trust4Title: "Sifatli ta'mirlash",
+      trust4Desc: "Qulay narxlarda ajoyib sifatli ta'mirlash",
+      
+      // Testimonials
+      testimonialsTitle: "Mijozlar fikrlari",
+      testimonialsSubtitle: "Biz yordam bergan baxtli mijozlarimizning fikrlari",
+      
+      testimonial1Name: "Alisher Karimov",
+      testimonial1Role: "Uy egasi",
+      testimonial1Text: "Kompaniyaga tezkorligi va professionallik uchun minnatdorchilik bildirmoqchiman. Ish sifatli va o'z vaqtida bajarildi. Endi menda yana qulay va ishonchli isitish tizimi bor!",
+      
+      testimonial2Name: "Dilnoza Rahimova",
+      testimonial2Role: "Ofis menejeri",
+      testimonial2Text: "Bu kompaniyaning mijozlarga e'tiborli munosabatini ta'kidlamoqchiman. Menga katyol ta'mirlashning optimal variantini tanlashda yordam berishdi, professional maslahat berishdi va yuqori sifatli ta'mirlashni amalga oshirishdi.",
+      
+      testimonial3Name: "Sardor Usmonov",
+      testimonial3Role: "Tadbirkor",
+      testimonial3Text: "Odatda sharh qoldirmayman, lekin bu yerda o'tib ketolmadim. Bu kompaniyada katyol ta'mirlashni buyurtma qildim va natijadan juda mamnunman. Bolalar aniq va ehtiyotkorlik bilan ishlashdi.",
+      
+      // Additional Services
+      additionalServicesTitle: "Qo'shimcha xizmatlarimiz",
+      service1: "Gaz katyollarini sozlash",
+      service2: "Profilaktika ishlari va tozalash",
+      service3: "Devordagi va poldagi katyollar xizmati",
+      service4: "Ikki konturli katyollar xizmati",
+      service5: "Gaz va suv sizishini tuzatish",
+      service6: "Boshqaruv platasi ta'mirlash"
     },
 
     // About Page
