@@ -275,7 +275,15 @@ export const translations = {
       banner2: "24/7",
       banner2Label: "Doim xizmatdamiz",
       banner3: "Bepul",
-      banner3Label: "Diagnostika xizmati"
+      banner3Label: "Diagnostika xizmati",
+      
+      // Lead Form
+      leadFormTitle: "Ariza qoldirish",
+      leadFormSubtitle: "Qo'ng'iroqni kuting, biz tez orada aloqaga chiqamiz",
+      serviceTypeLabel: "Xizmat turi",
+      serviceTypePlaceholder: "Xizmatni tanlang",
+      messageLabel: "Xabar (ixtiyoriy)",
+      messagePlaceholder: "Qo'shimcha ma'lumot..."
     },
 
     // Boiler Brand Page
