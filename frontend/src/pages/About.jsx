@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, Phone } from 'lucide-react';
 import { aboutContent, siteInfo } from '../data/mock';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 const About = () => {
   const { t } = useLanguage();
   
   return (
     <div className="min-h-screen pt-20">
+      <SEOHead page="about" />
+      
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Phone, ChevronRight } from 'lucide-react';
 import { heroContent, boilerBrands, siteInfo } from '../data/mock';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 import PricingSection from '../components/PricingSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import TrustSignalsSection from '../components/TrustSignalsSection';
@@ -13,6 +14,8 @@ const Home = () => {
   
   return (
     <div className="min-h-screen">
+      <SEOHead page="home" />
+      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
