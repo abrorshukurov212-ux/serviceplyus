@@ -136,6 +136,14 @@ export const translations = {
       testimonial3Role: "Tadbirkor",
       testimonial3Text: "Odatda sharh qoldirmayman, lekin bu yerda o'tib ketolmadim. Bu kompaniyada katyol ta'mirlashni buyurtma qildim va natijadan juda mamnunman. Bolalar aniq va ehtiyotkorlik bilan ishlashdi.",
       
+      testimonial4Name: "Jahongir Toshmatov",
+      testimonial4Role: "Qurilish kompaniyasi direktori",
+      testimonial4Text: "ServicePlyus bilan ishlash - bu haqiqiy zavq. Mutaxassislar o'z ishini mukammal biladilar, barcha ishlar o'z vaqtida va sifatli bajariladi. Katyolimiz endi mukammal ishlayapti, qish mavsumida hech qanday muammo bo'lmadi.",
+      
+      testimonial5Name: "Madina Rahmonova",
+      testimonial5Role: "Restoran egasi",
+      testimonial5Text: "Restorandagi katyol buzilganda, ServicePlyus tezda yordam berdi. 24/7 xizmat - bu juda muhim. Ular kechqurun kelishdi va bir necha soatda muammoni hal qilishdi. Professional yondashuv va qulay narxlar. Tavsiya qilaman!",
+      
       // Additional Services
       additionalServicesTitle: "Qo'shimcha xizmatlarimiz",
       service1: "Gaz katyollarini sozlash",
@@ -467,6 +475,14 @@ export const translations = {
       testimonial3Name: "Саша Коротких",
       testimonial3Role: "Креативный директор SoSoul magazine",
       testimonial3Text: "Никогда не оставляю отзывы, но тут не могла пройти мимо. Заказывала ремонт котла в этой компании и осталась очень довольна результатом. Ребята работали четко и аккуратно, они настоящие профессионалы своего дела.",
+      
+      testimonial4Name: "Дмитрий Соколов",
+      testimonial4Role: "Директор строительной компании",
+      testimonial4Text: "Работать с ServicePlyus - настоящее удовольствие. Специалисты знают свое дело на отлично, все работы выполнены в срок и качественно. Наш котел теперь работает безупречно, зимой не было никаких проблем.",
+      
+      testimonial5Name: "Мадина Рахимова",
+      testimonial5Role: "Владелец ресторана",
+      testimonial5Text: "Когда сломался котел в ресторане, ServicePlyus быстро помог. Сервис 24/7 - это очень важно. Они приехали вечером и за несколько часов решили проблему. Профессиональный подход и доступные цены. Рекомендую!",
       
       // Additional Services
       additionalServicesTitle: "Дополнительные услуги",

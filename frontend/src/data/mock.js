@@ -4,8 +4,9 @@ export const siteInfo = {
   name: "ServicePlyus",
   phone: "+998 92 070 54 54",
   phoneLink: "tel:+998920705454",
-  telegram: "https://t.me/serviceplyus", // placeholder
-  instagram: "https://instagram.com/serviceplyus", // placeholder
+  telegram: "https://t.me/Umidserviceplyus",
+  telegramUsername: "@Umidserviceplyus",
+  instagram: "https://instagram.com/serviceplyus",
   workingHours: "24/7",
   serviceArea: "Xizmat faqat Toshkent shahri bo'yicha"
 };
