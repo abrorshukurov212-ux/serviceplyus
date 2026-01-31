@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Search, Wrench, Settings, CheckCircle, Phone, ChevronRight } from 'lucide-react';
 import { services, siteInfo } from '../data/mock';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 const Services = () => {
   const { t } = useLanguage();

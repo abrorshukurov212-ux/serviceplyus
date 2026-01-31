@@ -3,6 +3,7 @@ import { Phone, MapPin, Clock, Send } from 'lucide-react';
 import { siteInfo, submitContactForm } from '../data/mock';
 import { toast } from 'sonner';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
   const { t } = useLanguage();
