@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "./components/ui/sonner";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
@@ -23,37 +22,35 @@ import BlogArticlePage from "./pages/BlogArticlePage";
 function App() {
   return (
     <div className="App">
-      <HelmetProvider>
-        <LanguageProvider>
-          <BrowserRouter>
-            <Navbar />
-            <main>
-              <Routes>
-                {/* Main Pages */}
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contact" element={<Contact />} />
-                
-                {/* Service Pages */}
-                <Route path="/xizmatlar/:slug" element={<ServicePage />} />
-                
-                {/* Pricing Page */}
-                <Route path="/narxlar" element={<PricingPage />} />
-                
-                {/* Blog Pages */}
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:slug" element={<BlogArticlePage />} />
-                
-                {/* Boiler Brand Pages */}
-                <Route path="/katyollar/:slug" element={<BoilerBrandPage />} />
-              </Routes>
-            </main>
-            <Footer />
-            <Toaster position="top-center" richColors />
-          </BrowserRouter>
-        </LanguageProvider>
-      </HelmetProvider>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Navbar />
+          <main>
+            <Routes>
+              {/* Main Pages */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+              
+              {/* Service Pages */}
+              <Route path="/xizmatlar/:slug" element={<ServicePage />} />
+              
+              {/* Pricing Page */}
+              <Route path="/narxlar" element={<PricingPage />} />
+              
+              {/* Blog Pages */}
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogArticlePage />} />
+              
+              {/* Boiler Brand Pages */}
+              <Route path="/katyollar/:slug" element={<BoilerBrandPage />} />
+            </Routes>
+          </main>
+          <Footer />
+          <Toaster position="top-center" richColors />
+        </BrowserRouter>
+      </LanguageProvider>
     </div>
   );
 }
