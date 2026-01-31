@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Calendar, ArrowRight, BookOpen } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SEOHead from '../components/SEOHead';
 import EnhancedLeadForm from '../components/EnhancedLeadForm';
 
 const BlogPage = () => {
