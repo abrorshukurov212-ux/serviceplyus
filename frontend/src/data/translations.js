@@ -29,6 +29,9 @@ export const translations = {
       heroTitle: "Katyol remont va texnik xizmat",
       heroSubtitle: "Toshkent bo'ylab tez va ishonchli katyol ta'mirlash xizmati",
       heroDescription: "Barcha turdagi katyollarni professional ta'mirlash, diagnostika va texnik xizmat ko'rsatish",
+      averageRepairTime: "O'rtacha ta'mirlash vaqti 25-30 daqiqa",
+      paymentAfterRepair: "To'lov faqat ta'mirlashdan keyin",
+      discountWebsite: "Sayt orqali buyurtmada 10% chegirma",
       
       advantagesTitle: "Nega aynan biz?",
       advantagesSubtitle: "ServicePlyus - katyol ta'mirlashda sizning ishonchli hamkoringiz",
