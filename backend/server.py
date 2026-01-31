@@ -42,6 +42,12 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
+class LeadSubmission(BaseModel):
+    name: str
+    phone: str
+    service_type: Optional[str] = None
+    message: Optional[str] = None
+
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
