@@ -233,38 +233,51 @@ export const boilerBrands = [
 export const services = [
   {
     id: 1,
-    title: "Katyol diagnostikasi",
-    description: "Katyolning ishdan chiqish sabablarini aniq aniqlash va to'liq diagnostika o'tkazish xizmati",
+    slug: "diagnostika",
     icon: "Search",
-    image: "https://images.unsplash.com/photo-1606485940233-76eeff49360c"
+    image: "https://images.pexels.com/photos/7859953/pexels-photo-7859953.jpeg"
   },
   {
     id: 2,
-    title: "Katyol ta'mirlash",
-    description: "Barcha turdagi nosozliklarni tezkor va sifatli ta'mirlash, ishga tushirish",
-    icon: "Wrench",
-    image: "https://images.unsplash.com/photo-1742989667140-c69adadf556b"
+    slug: "tozalash",
+    icon: "Droplets",
+    image: "https://images.pexels.com/photos/7736158/pexels-photo-7736158.jpeg"
   },
   {
     id: 3,
-    title: "Ehtiyot qismlarni almashtirish",
-    description: "Asl ehtiyot qismlar bilan ishonchli almashtirish xizmati",
+    slug: "uch-klapan",
     icon: "Settings",
-    image: "https://images.unsplash.com/photo-1676035292549-b046020bca87"
+    image: "https://images.unsplash.com/photo-1594233078955-e1f73a02ebb2"
   },
   {
     id: 4,
-    title: "Yillik texnik xizmat",
-    description: "Katyolni tozalash, sozlash va optimal ishlashini ta'minlash",
-    icon: "CheckCircle",
-    image: "https://images.unsplash.com/photo-1676035292552-2aad11e836de"
+    slug: "turbina",
+    icon: "Fan",
+    image: "https://images.unsplash.com/photo-1618826470964-f6f8b3ae52aa"
   },
   {
     id: 5,
-    title: "O'rnatish va sozlash",
-    description: "Yangi katyollarni professional o'rnatish va ishga tushirish",
-    icon: "Wrench",
+    slug: "issiqlik-almashgich",
+    icon: "Flame",
+    image: "https://images.pexels.com/photos/6471911/pexels-photo-6471911.jpeg"
+  },
+  {
+    id: 6,
+    slug: "bosim-sensori",
+    icon: "Gauge",
+    image: "https://images.unsplash.com/photo-1658758904121-ee49fc5e205c"
+  },
+  {
+    id: 7,
+    slug: "manostat",
+    icon: "Wind",
     image: "https://images.pexels.com/photos/8478264/pexels-photo-8478264.jpeg"
+  },
+  {
+    id: 8,
+    slug: "shoshilinch",
+    icon: "AlertTriangle",
+    image: "https://images.pexels.com/photos/33813584/pexels-photo-33813584.jpeg"
   }
 ];
 
