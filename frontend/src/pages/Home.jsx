@@ -122,6 +122,12 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Testimonials Section - NEW */}
+      <TestimonialsSection />
+
+      {/* Enhanced Lead Form - NEW */}
+      <EnhancedLeadForm />
+
       {/* Trust & CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
