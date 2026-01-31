@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Award, Shield, Clock, DollarSign, ChevronRight } from 'lucide-react';
-import { heroContent, advantages, boilerBrands, siteInfo } from '../data/mock';
+import { Phone, ChevronRight } from 'lucide-react';
+import { heroContent, boilerBrands, siteInfo } from '../data/mock';
 import { useLanguage } from '../contexts/LanguageContext';
+import PricingSection from '../components/PricingSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import TrustSignalsSection from '../components/TrustSignalsSection';
+import EnhancedLeadForm from '../components/EnhancedLeadForm';
 
 const Home = () => {
   const { t } = useLanguage();
