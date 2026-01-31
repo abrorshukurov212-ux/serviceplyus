@@ -77,6 +77,55 @@ async def get_status_checks():
     
     return status_checks
 
+@api_router.post("/lead")
+async def submit_lead(lead: LeadSubmission):
+    """Submit lead and send to Telegram"""
+    try:
+        # Save to database
+        lead_dict = lead.model_dump()
+        lead_dict['id'] = str(uuid.uuid4())
+        lead_dict['timestamp'] = datetime.now(timezone.utc).isoformat()
+        await db.leads.insert_one(lead_dict)
+        
+        # Send to Telegram if configured
+        if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID:
+            # Format message
+            message = f"""🛠 YANGI BUYURTMA | ServicePlyus
+
+👤 Ism: {lead.name}
+📞 Telefon: {lead.phone}"""
+            
+            if lead.service_type:
+                message += f"\n🔧 Xizmat: {lead.service_type}"
+            
+            if lead.message:
+                message += f"\n💬 Xabar: {lead.message}"
+            
+            message += f"""
+
+📍 Hudud: Toshkent
+⏰ Ish vaqti: 24/7
+🌐 Sayt: serviceplyus.uz"""
+            
+            # Send to Telegram
+            telegram_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+            telegram_data = {
+                "chat_id": TELEGRAM_CHAT_ID,
+                "text": message,
+                "parse_mode": "HTML"
+            }
+            
+            response = requests.post(telegram_url, json=telegram_data, timeout=10)
+            
+            if response.status_code != 200:
+                logger.warning(f"Telegram API error: {response.text}")
+        
+        return {"success": True, "message": "Arizangiz qabul qilindi!"}
+        
+    except Exception as e:
+        logger.error(f"Error submitting lead: {str(e)}")
+        return {"success": False, "message": "Xatolik yuz berdi. Qayta urinib ko'ring."}
+
 # Include the router in the main app
 app.include_router(api_router)
 
