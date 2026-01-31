@@ -337,6 +337,267 @@ export const translations = {
       serviceArea: "Xizmat faqat Toshkent shahri bo'yicha",
       workingHours: "Ish vaqti: 24/7",
       copyright: "Barcha huquqlar himoyalangan."
+    },
+
+    // Individual Service Pages
+    servicePages: {
+      diagnostika: {
+        title: "Katyol diagnostikasi",
+        heroTitle: "Professional katyol diagnostikasi",
+        heroSubtitle: "Katyolning ishdan chiqish sabablarini aniq aniqlash va to'liq diagnostika xizmati",
+        price: "400,000 so'mdan",
+        duration: "30-60 daqiqa",
+        description: "Bizning tajribali mutaxassislarimiz katyolning barcha tizimlarini chuqur tekshiradilar. Zamonaviy diagnostika uskunalari yordamida nosozliklarni aniq aniqlaymiz va optimal ta'mirlash yo'lini tavsiya qilamiz.",
+        features: [
+          "Barcha katyol brendlarini diagnostika qilish",
+          "Zamonaviy diagnostika uskunalari",
+          "Aniq nosozlik aniqlash",
+          "Yozma hisobot taqdim etish",
+          "Ta'mirlash tavsiyalari",
+          "Narx kalkulyatsiyasi"
+        ],
+        process: [
+          "Katyolni tashqi ko'rikdan o'tkazish",
+          "Elektr tizimlarini tekshirish",
+          "Gaz va suv bosimini o'lchash",
+          "Sensorlar va klapanlarni test qilish",
+          "Xavfsizlik tizimlarini tekshirish",
+          "Diagnostika hisobotini tayyorlash"
+        ]
+      },
+      tozalash: {
+        title: "Katyol tozalash va texnik xizmat",
+        heroTitle: "Katyol tozalash va profilaktika",
+        heroSubtitle: "Katyolni tozalash, sozlash va optimal ishlashini ta'minlash xizmati",
+        price: "450,000 so'mdan",
+        duration: "1-2 soat",
+        description: "Muntazam tozalash katyolning samaradorligini oshiradi va xizmat muddatini uzaytiradi. Bizning ustalarimiz issiqlik almashinuvchi, yonish kamerasi va boshqa muhim qismlarni professional darajada tozalaydi.",
+        features: [
+          "Issiqlik almashinuvchi tozalash",
+          "Yonish kamerasini tozalash",
+          "Gaz gorelkasini tozalash",
+          "Filtrlarni tozalash/almashtirish",
+          "Suv tizimini tozalash",
+          "Katyolni sozlash va optimizatsiya"
+        ],
+        process: [
+          "Katyolni o'chirish va xavfsizlik tekshiruvi",
+          "Issiqlik almashinuvchini olib tashlash",
+          "Kimyoviy va mexanik tozalash",
+          "Yonish kamerasini tozalash",
+          "Qayta yig'ish va test",
+          "Ishlash samaradorligini tekshirish"
+        ]
+      },
+      "uch-klapan": {
+        title: "Uch yo'nalishli klapan ta'mirlash",
+        heroTitle: "Uch yo'nalishli klapan almashtirish",
+        heroSubtitle: "Professional ta'mirlash va asl ehtiyot qismlar bilan almashtirish",
+        price: "450,000 so'mdan",
+        duration: "1-1.5 soat",
+        description: "Uch yo'nalishli klapan issiq suv va isitish tizimi o'rtasida suv oqimini boshqaradi. Bu qism nosozligi natijasida katyol to'g'ri ishlamaydi. Bizning ustalarimiz asl qismlar bilan tezda almashtirib beradilar.",
+        features: [
+          "Asl ehtiyot qismlar ishlatish",
+          "Barcha brendlar uchun xizmat",
+          "Tezkor almashtirish",
+          "Kafolat xizmati",
+          "Test va sozlash",
+          "Texnik maslahat"
+        ],
+        process: [
+          "Nosozlikni diagnostika qilish",
+          "Katyol brendiga mos qism tanlash",
+          "Eski klapanni olib tashlash",
+          "Yangi klapanni o'rnatish",
+          "Tizimni test qilish",
+          "Mijozga ko'rsatmalar berish"
+        ]
+      },
+      turbina: {
+        title: "Turbina ta'mirlash",
+        heroTitle: "Turbo ventilyator ta'mirlash va almashtirish",
+        heroSubtitle: "Chiqarish tizimi ta'mirlash va professional xizmat",
+        price: "850,000 so'mdan",
+        duration: "1.5-2.5 soat",
+        description: "Turbo ventilyator yonish mahsulotlarini chiqaradi va toza havo olib keladi. Uning buzilishi xavfli bo'lishi mumkin. Professional ustalarimiz tezda ta'mirlab yoki almashtirib beradilar.",
+        features: [
+          "Ventilyator motorini ta'mirlash",
+          "To'liq almashtirish xizmati",
+          "Asl ehtiyot qismlar",
+          "Shovqin muammolarini hal qilish",
+          "Chiqarish tizimini tozalash",
+          "Xavfsizlik tekshiruvi"
+        ],
+        process: [
+          "Turbina nosozligini aniqlash",
+          "Motor holatini baholash",
+          "Ta'mirlash yoki almashtirish",
+          "Chiqarish tizimini tozalash",
+          "Test va kalibrovka",
+          "Xavfsizlik tekshiruvi"
+        ]
+      },
+      "issiqlik-almashgich": {
+        title: "Issiqlik almashinuvchi almashtirish",
+        heroTitle: "Issiqlik almashinuvchi xizmati",
+        heroSubtitle: "Professional almashtirish va yangi issiqlik almashinuvchi o'rnatish",
+        price: "1,300,000 so'mdan",
+        duration: "2-3 soat",
+        description: "Issiqlik almashinuvchi katyolning eng muhim qismi - u issiqlikni suvga o'tkazadi. Korroziya yoki tiqilish bo'lsa, almashtirish kerak. Yuqori sifatli qismlar bilan professional xizmat ko'rsatamiz.",
+        features: [
+          "Yuqori sifatli qismlar",
+          "Barcha brendlar uchun",
+          "Professional o'rnatish",
+          "Tizimni yuvish",
+          "Kafolat xizmati",
+          "Samaradorlik kafolati"
+        ],
+        process: [
+          "Eski almashgichni demontaj qilish",
+          "Tizimni yuvish va tozalash",
+          "Yangi almashgich o'rnatish",
+          "Ulanishlarni tekshirish",
+          "Bosim testi",
+          "Samaradorlik tekshiruvi"
+        ]
+      },
+      "bosim-sensori": {
+        title: "Bosim sensori almashtirish",
+        heroTitle: "Suv bosimi sensori xizmati",
+        heroSubtitle: "Bosim datchigini almashtirish va ta'mirlash",
+        price: "250,000 so'mdan",
+        duration: "30-45 daqiqa",
+        description: "Bosim sensori katyoldagi suv bosimini nazorat qiladi. Buzilgan sensor noto'g'ri ma'lumotlar beradi va katyol xavfsiz ishlamaydi. Tezda va sifatli almashtirish xizmati.",
+        features: [
+          "Tezkor almashtirish",
+          "Asl sensorlar",
+          "Barcha brendlar uchun",
+          "Kalibrovka xizmati",
+          "Kafolat",
+          "Arzon narxlar"
+        ],
+        process: [
+          "Sensor holatini tekshirish",
+          "Mos qism tanlash",
+          "Eski sensorni olib tashlash",
+          "Yangi sensorni o'rnatish",
+          "Kalibrovka qilish",
+          "Test va tekshirish"
+        ]
+      },
+      manostat: {
+        title: "Manostat almashtirish",
+        heroTitle: "Manostat (havo bosimi datchigi) xizmati",
+        heroSubtitle: "Manostat almashtirish va ta'mirlash xizmati",
+        price: "380,000 so'mdan",
+        duration: "45 daqiqa - 1 soat",
+        description: "Manostat havo bosimini nazorat qiladi va katyol xavfsiz ishlashini ta'minlaydi. Nosozlik bo'lsa, katyol yonmaydi yoki o'chib qoladi. Professional almashtirish xizmati.",
+        features: [
+          "Professional diagnostika",
+          "Asl ehtiyot qismlar",
+          "Tezkor xizmat",
+          "Kafolat bilan",
+          "Barcha brendlar",
+          "Sifatli ishlash"
+        ],
+        process: [
+          "Manostat diagnostikasi",
+          "Havo trubkalarini tekshirish",
+          "Yangi manostat o'rnatish",
+          "Ulanishlarni tekshirish",
+          "Katyolni ishga tushirish",
+          "Xavfsizlik testi"
+        ]
+      },
+      shoshilinch: {
+        title: "Shoshilinch ta'mirlash 24/7",
+        heroTitle: "Shoshilinch katyol ta'mirlash xizmati",
+        heroSubtitle: "24/7 tezkor chiqish va muammoni bartaraf etish",
+        price: "Kelishuv asosida",
+        duration: "Tezkor chiqish",
+        description: "Qish kechasi katyol buzilsa nima qilasiz? Bizga qo'ng'iroq qiling! 24/7 ishlayapmiz. O'sha kuni, o'sha soatda ustalar yetib keladi va muammoni hal qiladi.",
+        features: [
+          "24/7 ish tartibi",
+          "30-60 daqiqada yetib kelish",
+          "Tungi va dam olish kunlari",
+          "Shoshilinch ehtiyot qismlar",
+          "Professional ustalar",
+          "Kafolat xizmati"
+        ],
+        process: [
+          "Qo'ng'iroq qabul qilish",
+          "Tezkor chiqish (30-60 daq)",
+          "Muammoni tezda aniqlash",
+          "Darhol ta'mirlash",
+          "Test va tekshirish",
+          "Kafolat berish"
+        ]
+      }
+    },
+
+    // Pricing Page
+    pricing: {
+      title: "Narxlar",
+      heroTitle: "Xizmat narxlari",
+      heroSubtitle: "Shaffof va adolatli narxlar. Diagnostika bepul!",
+      tableHeaders: {
+        service: "Xizmat turi",
+        price: "Narxi",
+        duration: "Vaqti"
+      },
+      note: "* Aniq narx diagnostikadan keyin aniqlanadi. Narxlar katyol brendiga qarab o'zgarishi mumkin.",
+      categories: {
+        diagnostics: "Diagnostika va tekshirish",
+        repair: "Ta'mirlash xizmatlari",
+        replacement: "Qismlarni almashtirish",
+        maintenance: "Texnik xizmat"
+      },
+      cta: {
+        title: "Aniq narxni bilmoqchimisiz?",
+        subtitle: "Bepul diagnostika buyurtma qiling - usta kelib aniq narxni aytadi",
+        button: "Bepul diagnostika"
+      }
+    },
+
+    // Blog Page
+    blog: {
+      title: "Blog",
+      heroTitle: "Foydali maqolalar",
+      heroSubtitle: "Katyol haqida bilishingiz kerak bo'lgan hamma narsa",
+      readMore: "Batafsil o'qish",
+      categories: {
+        tips: "Maslahatlar",
+        maintenance: "Texnik xizmat",
+        repair: "Ta'mirlash",
+        selection: "Tanlash"
+      },
+      articles: [
+        {
+          id: 1,
+          slug: "katyolni-qanday-saqlash",
+          title: "Katyolni qanday to'g'ri saqlash kerak?",
+          excerpt: "Katyolning uzoq va xavfsiz ishlashi uchun muntazam texnik xizmat ko'rsatish zarur. Bu maqolada asosiy qoidalarni o'rganasiz.",
+          category: "maintenance",
+          date: "2024-12-15"
+        },
+        {
+          id: 2,
+          slug: "katyol-tanlash",
+          title: "Yangi katyol qanday tanlash kerak?",
+          excerpt: "Uy uchun katyol tanlashda nimalarni e'tiborga olish kerak? Brendlar, quvvat va boshqa muhim omillar.",
+          category: "selection",
+          date: "2024-12-10"
+        },
+        {
+          id: 3,
+          slug: "qish-tayyorgarlik",
+          title: "Qishga tayyorgarlik: katyolni tekshirish",
+          excerpt: "Qish mavsumidan oldin katyolni qanday tekshirish va tayyorlash kerak? Professional maslahatlar.",
+          category: "tips",
+          date: "2024-12-05"
+        }
+      ],
+      comingSoon: "Tez orada yangi maqolalar qo'shiladi!"
     }
   },
 
