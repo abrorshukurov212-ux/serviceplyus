@@ -125,9 +125,10 @@ const BlogPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article) => (
-              <article
+              <Link
                 key={article.id}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+                to={`/blog/${article.slug}`}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group block"
                 data-testid={`blog-article-${article.slug}`}
               >
                 <div className="aspect-video overflow-hidden">
@@ -166,7 +167,7 @@ const BlogPage = () => {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
           
