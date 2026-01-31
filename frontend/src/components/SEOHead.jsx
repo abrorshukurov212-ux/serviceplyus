@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 // SEO Meta data for all pages - bilingual (UZ/RU)
@@ -35,7 +34,6 @@ export const seoData = {
       description: "Katyol ta'mirlash uchun qo'ng'iroq qiling: +998 92 070 54 54. Telegram: @Umidserviceplyus. 24/7 xizmatdamiz. Toshkent bo'ylab tezkor chiqish.",
       keywords: "katyol ta'mirlash telefon, ServicePlyus aloqa, katyol usta chaqirish"
     },
-    // Service Pages
     servicePages: {
       diagnostika: {
         title: "Katyol Diagnostikasi Toshkentda | Bepul Tekshirish - ServicePlyus",
@@ -78,7 +76,6 @@ export const seoData = {
         keywords: "shoshilinch katyol ta'mirlash, katyol ta'mirlash 24/7, tezkor katyol xizmati"
       }
     },
-    // Boiler Brand Pages
     boilerPages: {
       baxi: {
         title: "Baxi Katyol Remonti Toshkentda | ServicePlyus",
@@ -151,7 +148,6 @@ export const seoData = {
         keywords: "Orbek katyol remont, Orbek ta'mirlash"
       }
     },
-    // Blog Articles
     blogArticles: {
       "katyolni-qanday-saqlash": {
         title: "Katyolni Qanday To'g'ri Saqlash Kerak? | ServicePlyus Blog",
@@ -201,7 +197,6 @@ export const seoData = {
       description: "Вызов мастера по ремонту котлов: +998 92 070 54 54. Telegram: @Umidserviceplyus. Работаем 24/7. Быстрый выезд по Ташкенту.",
       keywords: "ремонт котлов телефон, контакты ServicePlyus, вызов мастера по котлам"
     },
-    // Service Pages
     servicePages: {
       diagnostika: {
         title: "Диагностика Котла в Ташкенте | Бесплатная Проверка - ServicePlyus",
@@ -244,7 +239,6 @@ export const seoData = {
         keywords: "срочный ремонт котла, ремонт котла 24/7, экстренный ремонт котла"
       }
     },
-    // Boiler Brand Pages
     boilerPages: {
       baxi: {
         title: "Ремонт Котлов Baxi в Ташкенте | ServicePlyus",
@@ -317,7 +311,6 @@ export const seoData = {
         keywords: "ремонт Orbek, Orbek ремонт"
       }
     },
-    // Blog Articles
     blogArticles: {
       "katyolni-qanday-saqlash": {
         title: "Как Правильно Обслуживать Котел? | ServicePlyus Блог",
@@ -341,46 +334,51 @@ export const seoData = {
 const SEOHead = ({ page, slug = null }) => {
   const { language } = useLanguage();
   
-  let seo;
+  useEffect(() => {
+    let seo;
+    
+    if (page === 'service' && slug) {
+      seo = seoData[language]?.servicePages?.[slug] || seoData[language]?.services;
+    } else if (page === 'boiler' && slug) {
+      seo = seoData[language]?.boilerPages?.[slug] || seoData[language]?.home;
+    } else if (page === 'blog-article' && slug) {
+      seo = seoData[language]?.blogArticles?.[slug] || seoData[language]?.blog;
+    } else {
+      seo = seoData[language]?.[page] || seoData[language]?.home;
+    }
+    
+    // Update document title
+    document.title = seo.title;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', seo.description);
+    }
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', seo.keywords);
+    }
+    
+    // Update OG tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', seo.title);
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', seo.description);
+    }
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = language;
+    
+  }, [page, slug, language]);
   
-  if (page === 'service' && slug) {
-    seo = seoData[language]?.servicePages?.[slug] || seoData[language]?.services;
-  } else if (page === 'boiler' && slug) {
-    seo = seoData[language]?.boilerPages?.[slug] || seoData[language]?.home;
-  } else if (page === 'blog-article' && slug) {
-    seo = seoData[language]?.blogArticles?.[slug] || seoData[language]?.blog;
-  } else {
-    seo = seoData[language]?.[page] || seoData[language]?.home;
-  }
-  
-  const siteName = "ServicePlyus";
-  const siteUrl = "https://serviceplyus.uz";
-  
-  return (
-    <Helmet>
-      <title>{seo.title}</title>
-      <meta name="description" content={seo.description} />
-      <meta name="keywords" content={seo.keywords} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={seo.title} />
-      <meta property="og:description" content={seo.description} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:type" content="website" />
-      <meta property="og:locale" content={language === 'uz' ? 'uz_UZ' : 'ru_RU'} />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:description" content={seo.description} />
-      
-      {/* Language */}
-      <html lang={language} />
-      
-      {/* Canonical */}
-      <link rel="canonical" href={siteUrl} />
-    </Helmet>
-  );
+  return null; // This component doesn't render anything
 };
 
 export default SEOHead;
