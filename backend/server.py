@@ -101,7 +101,7 @@ async def submit_lead(lead: LeadSubmission):
             if lead.message:
                 message += f"\n💬 Xabar: {lead.message}"
             
-            message += f"""
+            message += """
 
 📍 Hudud: Toshkent
 ⏰ Ish vaqti: 24/7
